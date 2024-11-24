@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roejak Lava (Java)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      /* Header Styling */
+      header {
+        background-color: #fff;
+        padding: 15px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo img {
+        height: 50px;
+        width: 150px;
+        object-fit: contain;
+      }
+
+      .logo h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #ff6600;
+      }
+
+      .nav-links,
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1em;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #ff6600;
+      }
+
+      .social-icons a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .social-icons img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+        transition: transform 0.3s;
+      }
+
+      .social-icons img:hover {
+        transform: scale(1.2);
+      }
+
+      .social-icons span {
+        margin-left: 5px;
+        font-size: 0.9em;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover span {
+        color: #ff6600;
+      }
+
+      .pre-order-button {
+        background-color: #ff6600;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        font-size: 0.9em;
+      }
+
+      .pre-order-button:hover {
+        background-color: #e65500;
+      }
+
+      /* Main Content Styling */
+      #home {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #ffffff;
+      }
+
+      #home h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      #home p {
+        font-size: 1.1em;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      #products {
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #f4f4f4;
+      }
+
+      #products h2 {
+        font-size: 1.6em;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .product-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .product {
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 15px;
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .product:hover {
+        transform: scale(1.05);
+      }
+
+      .product h3 {
+        font-size: 1.3em;
+        color: #ff6600;
+        margin-bottom: 10px;
+      }
+
+      .product-image {
+        width: 100%;
+        max-width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      .product p {
+        color: #666;
+        font-size: 0.9em;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.9em;
+      }
+
+      /* Media Query for Mobile */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .logo h1 {
+          font-size: 1.3em;
+        }
+
+        .nav-links {
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        .social-icons {
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        .product {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="Gambar logo.jpg" alt="Roejak Lava (Java) Logo" />
+        <h1>Roejak Lava (Java)</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="social-icons">
+        <a href="#ig">
+          <img src="logo-6060989_640.webp" alt="Instagram" />
+          <span>Instagram</span>
+        </a>
+        <a href="#tiktok">
+          <img src="tiktok_logo_icon_189233.webp" alt="TikTok" />
+          <span>TikTok</span>
+        </a>
+        <a href="#wa">
+          <img src="WhatsApp.svg.webp" alt="WhatsApp" />
+          <span>WhatsApp</span>
+        </a>
+      </div>
+      <a href="#preorder" class="pre-order-button">Pre-Order</a>
+    </header>
+
+    <!-- Main Content -->
+    <section id="home">
+      <h2>Selamat Datang di Roejak Lava</h2>
+      <p>Segarnya Rujak Lava, Camilan Sehatmu di Kampus!</p>
+    </section>
+
+    <section id="products">
+      <h2>Produk Kami</h2>
+      <div class="product-container">
+        <div class="product">
+          <h3>Roejak Lava Jambu</h3>
+          <img
+            src="0f6aa30a893a5811cfd3a1536e681733.jpg"
+            alt="Roejak Lava Java"
+            class="product-image"
+          />
+          <p>
+            Rujak dengan potongan buah jambu yang renyah dan manis disajikan
+            dengan bumbu khas rujak.
+          </p>
+          <p>Harga: Rp10.000</p>
+        </div>
+        <div class="product">
+          <h3>Roejak Lava Spesial</h3>
+          <img
+            src="d813db82c57381662aa02da942aefc83.jpg"
+            alt="Roejak Lava Spesial"
+            class="product-image"
+          />
+          <p>Rujak buah segar dengan tambahan rempah spesial.</p>
+          <p>Harga: Rp10.000</p>
+        </div>
+        <div class="product">
+          <h3>Roejak Lava Pedas</h3>
+          <img
+            src="fd63260670791c1cf20e1286e924bfb3.jpg"
+            alt="Roejak Lava Pedas"
+            class="product-image"
+          />
+          <p>
+            Rujak dengan irisan mangga muda dengan rasa asam yang khas disajikan
+            dengan bumbu rujak yang khas.
+          </p>
+          <p>Harga: Rp10.000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Roejak Lava (Java). All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
